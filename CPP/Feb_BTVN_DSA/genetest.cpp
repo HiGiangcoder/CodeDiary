@@ -101,12 +101,14 @@ void Setup() {
 /* ----------------------------------------------------------------------- */
 /* ----------------------------------------------------------------------- */
  
-const int MAX = 1e6 + 7;
+const int MAX = 2e6 + 7;
 int n;
 double a[MAX];
 
 void make_test(int iTest) {
     n = 1e6;
+    if (random(0, 1)) n += random(0, (int)2e5);
+    else n -= random(0, (int)2e5);
     for (int i = 1; i <= n; i ++) {
         a[i] = random(-1e18, 1e18) / 1e9;
     }

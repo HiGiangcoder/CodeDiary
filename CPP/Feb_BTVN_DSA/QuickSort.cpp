@@ -4,7 +4,7 @@
 using namespace std;
 using namespace chrono;
 using ll = long long;
-const int MAX = 1e6 + 7;
+const int MAX = 2e6 + 7;
 
 mt19937_64 rngll(chrono :: steady_clock :: now().time_since_epoch().count());
 ll random(ll l, ll r) {
@@ -22,16 +22,17 @@ void init() {
 }
 
 int Patition(int l, int r) {
-    double pivot = a[random(l, r)];
-
+    int pivotIndex = random(l, r);
+    swap(a[pivotIndex], a[r]); 
+    double pivot = a[r];
     int u = l;
-    
-    for (int i = l; i <= r; i ++) {
+    for (int i = l; i < r; i++) {
         if (a[i] < pivot) {
             swap(a[u], a[i]);
-            u ++;
+            u++;
         }
     }
+    swap(a[u], a[r]); 
 
     return u;
 }
@@ -68,8 +69,8 @@ int main() {
 
         auto end = high_resolution_clock::now(); 
         auto duration = duration_cast<milliseconds>(end - start); 
-        cout << Check() << ' ';
-        cout << duration.count() << " ms" << endl;
+        // cout << Check() << ' ';
+        cout << duration.count() << endl;
 
         fclose(fp);
     }

@@ -4,7 +4,7 @@
 using namespace std;
 using namespace chrono;
 
-const int MAX = 1e6 + 7;
+const int MAX = 2e6 + 7;
 
 int n;
 double a[MAX];
@@ -75,7 +75,7 @@ int main() {
         auto duration = duration_cast<milliseconds>(end - start); 
 
         // cout << Check() << ' ';
-        cout << duration.count() << " ms" << endl;
+        cout << duration.count() << endl;
 
         fclose(fp);
     }

@@ -1,10 +1,32 @@
 import time
+import numpy as np
 
-start = time.time()  # Bắt đầu đếm thời gian
+def init(fp):
+    tokens = fp.read().split()
+    n = int(tokens[0])
+    a = [float(token) for token in tokens[1:1+n]]
+    return n, a
 
-# Code cần đo thời gian
-for _ in range(int(1e7)):
-    pass
+def process(a_np):
+    a_np.sort()
 
-end = time.time()  # Kết thúc đếm thời gian
-print(f"Thời gian chạy: {end - start:.6f} giây")
+def check(a):
+    return all(a[i-1] <= a[i] for i in range(1, len(a)))
+for i in range(1, 11):
+    num = str(i).zfill(2)
+    name = f"dsa{num}.inp"
+    
+    with open("dsa_dir/" + name, "r") as fp:
+        n, a = init(fp)
+    
+    a_np = np.array(a)
+    
+    start = time.perf_counter()
+    
+    process(a_np)
+    
+    end = time.perf_counter()
+    duration = (end - start) * 1000  
+    
+    # print(check(a_np))
+    print(f"{duration:.0f}")
