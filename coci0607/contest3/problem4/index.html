@@ -446,25 +446,7 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#du-lieu-vao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dữ liệu vào:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#du-lieu-ra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dữ liệu ra:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dữ liệu ra:">
+    <nav class="md-nav" aria-label="TENKICI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -480,6 +462,15 @@
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       Output:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scoring
     </span>
   </a>
   
@@ -708,25 +699,7 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#du-lieu-vao" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dữ liệu vào:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#du-lieu-ra" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dữ liệu ra:
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dữ liệu ra:">
+    <nav class="md-nav" aria-label="TENKICI">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -742,6 +715,15 @@
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
       Output:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scoring
     </span>
   </a>
   
@@ -780,40 +762,25 @@
   <h1>Problem 4</h1>
 
 <h3 id="tenkici">TENKICI</h3>
-<p>Xin lỗi về sự hiểu lầm trước đó. Dưới đây là bản dịch tiếng Việt của văn bản bạn yêu cầu:</p>
-<hr />
-<p>Mirko phát hiện một bộ sưu tập gồm <span class="arithmatex">\( N \)</span> chiếc xe tăng cũ từ Thế chiến thứ Hai trong gác xép của ông nội. Anh lập tức gọi bạn mình là Slavko đến để chơi cùng. Họ tạo ra một chiến trường – một tấm ván gỗ bao gồm các ô vuông với <span class="arithmatex">\( N \)</span> hàng và <span class="arithmatex">\( N \)</span> cột.</p>
-<p>Mỗi chiếc xe tăng có thể di chuyển đến một trong bốn ô liền kề trong một lần di chuyển. Một chiếc xe tăng có thể bắn vào bất kỳ ô nào trong cùng một hàng và cột mà nó đang đứng. Xe tăng được coi là "bảo vệ" hàng và cột mà nó đang ở.</p>
-<p>Ngoài ra, không có hai chiếc xe tăng nào có thể đứng ở cùng một ô tại bất kỳ thời điểm nào.</p>
-<p>Sau nhiều giờ chơi và hai lần thử trước, mẹ của Mirko lại la mắng họ phải xuống ăn trưa và họ quyết định sắp xếp lại các chiếc xe tăng sao cho mỗi chiếc xe tăng bảo vệ một hàng và một cột khác nhau (có nghĩa là mỗi hàng và mỗi cột chỉ chứa một chiếc xe tăng).</p>
-<p>Tuy nhiên, họ muốn làm điều này với số lần di chuyển ít nhất.</p>
-<p>Hãy viết một chương trình tìm ra số lần di chuyển ít nhất cần thiết để sắp xếp lại các chiếc xe tăng sao cho mỗi hàng và mỗi cột chứa đúng một chiếc xe tăng, và in ra một chuỗi các bước di chuyển ngắn nhất.</p>
-<hr />
-<h3 id="du-lieu-vao"><strong>Dữ liệu vào:</strong></h3>
-<p>Dòng đầu tiên chứa một số nguyên <span class="arithmatex">\( N \)</span> (<span class="arithmatex">\( 5 \leq N \leq 500 \)</span>). Mỗi dòng tiếp theo chứa hai số nguyên <span class="arithmatex">\( R \)</span> và <span class="arithmatex">\( C \)</span> (<span class="arithmatex">\( 1 \leq R, C \leq N \)</span>), chỉ vị trí hàng và cột của mỗi chiếc xe tăng lúc ban đầu. Không có hai chiếc xe tăng nào ở cùng một ô.</p>
-<h3 id="du-lieu-ra"><strong>Dữ liệu ra:</strong></h3>
-<p>In ra số lượng di chuyển tối thiểu (gọi là <span class="arithmatex">\( K \)</span>) trên dòng đầu tiên. Mỗi dòng tiếp theo sẽ chứa thông tin về một chiếc xe tăng được di chuyển và hướng di chuyển của nó, với số thứ tự của xe tăng và hướng di chuyển được phân tách bởi một khoảng trắng. Hướng có thể là một trong bốn chữ cái in hoa: 'L' (trái), 'R' (phải), 'U' (lên) và 'D' (xuống).</p>
-<p>Lưu ý: Chuỗi các bước di chuyển không nhất thiết phải là duy nhất.</p>
-<p><strong>Chấm điểm:</strong>
-- Nếu cả số lần di chuyển <span class="arithmatex">\( K \)</span> và chuỗi di chuyển đều chính xác, chương trình của bạn sẽ đạt điểm tối đa.
-- Nếu chương trình của bạn chỉ đưa ra số lần di chuyển đúng <span class="arithmatex">\( K \)</span> mà không đưa ra chuỗi di chuyển hoặc chuỗi di chuyển không đúng, bạn sẽ được 60% điểm cho trường hợp kiểm tra đó.</p>
-<p>Mirko  found  a  collection  of  N  toy  tanks  dating  back  to  the  Second  World  War  on  his  grandfather's attic. He promptly called his friend Slavko to play with him. They made a battlefield – a wooden board consisting of squares in N rows and N columns.</p>
-<p>Each tank can be moved to one of the four neighbouring squares in a single move. A tank can shoot at any square in the same row and column. The tank is said to be guarding the row and column it is in. </p>
-<p>Additionally, no two tanks can be in the same square at any time. </p>
-<p>After  many  hours  of  play  and  two  previous  attempts, Mirko's mom yelled at them to come down for lunch  again,  and  they  decided  to  rearrange  the  tanks  so  that  each  tank  guards  a  different row and column (meaning also that each row and column contains only one tank).</p>
-<p>However, they want to do this using the minimum number of moves. </p>
-<p>Write a program that finds the minimum number of moves required to rearrange the tanks so that each row and each column contains a single tank, and one such shortest sequence of moves. </p>
+<p>Mirko tìm thấy một bộ sưu tập <span class="arithmatex">\(N\)</span> chiếc xe tăng đồ chơi cũ từ thời <em>Thế chiến II</em> trên gác xép của ông nội. Cậu lập tức gọi bạn mình là Slavko đến để chơi cùng. Họ tạo ra một chiến trường là một tấm ván gỗ bao gồm các ô vuông với <span class="arithmatex">\(N\)</span> hàng và <span class="arithmatex">\(N\)</span> cột.</p>
+<p>Mỗi chiếc xe tăng có thể di chuyển đến một trong bốn ô kề cạnh. Một chiếc xe tăng có thể bắn vào bất kỳ ô vuông nào trên cùng hàng hoặc cùng cột mà nó đang đứng. Một xe tăng được coi là "bảo vệ" hàng và cột mà nó đang đứng.</p>
+<p>Ngoài ra, không có 2 xe tăng nào nằm trong cùng một ô vuông tại bất kỳ một thời điểm nào.</p>
+<p>Sauu nhiều giờ chơi, mẹ của Mirko la xuống ăn trưa, vì thế họ quyết định sắp xếp lại những chiếc xe tăng sao cho mỗi chiếc xe tăng đều bảo vệ các hàng và các cột khác nhau (tức là mỗi hàng và mỗi cột đêu chỉ chứa duy nhất một xe tăng).</p>
+<p>Tuy nhiên, họ muốn làm điều đó với số lần di chuyển các xe tăng là ít nhất có thể.</p>
+<p>Viết một chương trình tìm số lần di chuyển các xe tăng tối thiểu để sắp xếp lại các xe tăng sao cho mỗi hàng và mỗi cột chứa duy nhất một xe, và in ra một chuỗi các bước di chuyển ngắn nhất tìm được.</p>
 <h4 id="input">Input:</h4>
-<p>The first line of input contains the integer N (5 ≤ N ≤ 500). Each of the following N lines contains two integers R and C (1 ≤ R, S ≤ N), the row and column of a 
-single tank at the moment of mom's call. No two tanks are on the same square. Rows and columns are marked 1 through N, top-down and left-to-right. </p>
+<ul>
+<li>Dòng đầu tiên chứa một số nguyên <span class="arithmatex">\(N\)</span> <span class="arithmatex">\((5 \le N \le 500)\)</span>. </li>
+<li>Mỗi dòng trong số <span class="arithmatex">\(N\)</span> dòng tiếp theo chứa hai số nguyên <span class="arithmatex">\(R\)</span> và <span class="arithmatex">\(C\)</span> <span class="arithmatex">\((1 \le R, C \le N)\)</span> mô tả vị trí hàng và cột của mỗi xe tăng tại thời điểm bị mẹ của Mirko gọi đi ăn cơm. Đảm bảo rằng không có bất kỳ hai xe tăng nào nằm trong cùng một ô vuông. Các hàng và các cột được đánh số từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span>, từ trên xuống dưới và từ trái qua phải.</li>
+</ul>
 <h4 id="output">Output:</h4>
-<p>Output the minimum number of moves (call this number K) on the first line. Each  of  the  next  K  lines  should  contain  the  tank  being  moved  and  the  direction  it  is  moved  in,<br />
-separated by a single space. Tanks are numbered 1 through N, in the order in which they are given in the input. The direction can be one of four uppercase letters: 'L' for left, 'R' for right, 'U' for up and 'D' for down. 
-Note: The sequence need not be unique. 
-Scoring 
-If  both  the  number  K  and  the  sequence  of  moves  are  correct,  your  program  will  score  full  points  on<br />
-the test case. If  your  program  outputs  the  correct  number  K  and  does  not  output  the  sequence  of  moves,  or  the<br />
-sequence of moves is incorrect, you will get 60% of the points for that test case.</p>
+<ul>
+<li>Dòng đầu tiên in ra số lần di chuyển tối thiểu (ký hiệu là <span class="arithmatex">\(K\)</span>) trên dòng đầu tiên. </li>
+<li>Mỗi dòng trong số <span class="arithmatex">\(K\)</span> dòng tiếp theo, in ra chỉ số của xe tăng được di chuyển và hướng di chuyển của nó (số thứ tự của xe tăng và hướng di chuyển được phân cách bằng một khoảng trắng). Hướng di chuyển của xe tăng được ký hiệu bởi bốn chữ cái in hoa: 'L', 'R', 'U', 'D' lần lượt là trái, phải, trên, dưới.</li>
+<li>Lưu ý rằng chuỗi các bước di chuyển của xe tăng có thể có nhiều cách.</li>
+</ul>
+<h4 id="scoring">Scoring</h4>
+<p>Nếu cả hai số <span class="arithmatex">\(K\)</span> và cách di chuyển là đúng, bạn sẽ nhận được toàn bộ số điểm cho mỗi test. Nếu chương trình của bạn chỉ đúng <span class="arithmatex">\(K\)</span> và không in ra cách di chuyển hoặc cách di chuyển là sai thì bạn sẽ nhận được <span class="arithmatex">\(60\%\)</span> cho mỗi test.</p>
 <h4 id="example">Example:</h4>
 <div class="admonition question">
 <p class="admonition-title">Test 1</p>

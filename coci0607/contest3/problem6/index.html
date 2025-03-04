@@ -762,32 +762,39 @@
   <h1>Problem 6</h1>
 
 <h3 id="lista">LISTA</h3>
-<p>Mirko received a birthday present from his aunt in the US – a brand-new doubly-linked list (an example 
-of which is shown in the figure below). The list contains N nodes numbered 1 through N. Two types 
-of moves can be done on the list: A)  Move node X in front of node Y. B)  Move node X after node Y.  </p>
+<p>Mirko nhận được món quà sinh nhật từ dì của mình ở Mỹ, món quà là một danh sách liên kết đôi hoàn toàn mới. Danh sách này chứa <span class="arithmatex">\(N\)</span> nút, được đánh số từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span>. Có hai loại thao tác trên danh sách:
+- A: Di chuyển nút <span class="arithmatex">\(X\)</span> đến trước nút <span class="arithmatex">\(Y\)</span>.
+- B: Di chuyển nút <span class="arithmatex">\(X\)</span> ra sau nút <span class="arithmatex">\(Y\)</span>.</p>
 <p><img alt="prob6_1" src="../prob6_1.png" /></p>
-<p>An example of a list with 6 nodes. </p>
+<ul>
+<li>Ví dụ về danh sách liên kết đôi với 6 nút.</li>
+</ul>
 <p><img alt="prob6_2" src="../prob6_2.png" /></p>
-<p>The list after the move "A 1 4". </p>
+<ul>
+<li>Danh sách sau thao tác <code>A 1 4</code>. </li>
+</ul>
 <p><img alt="prob6_3" src="../prob6_3.png" /></p>
-<p>The list after another move, "B 3 5". </p>
-<p>Mirko played with his new toy for hours, writing down each move on a piece of paper so that he can 
-reconstruct the list's initial state (nodes 1 through N in order from left to right). When  he  decided  to  reconstruct  the  list,  Mirko  was  astonished  to  find  that  there  is  no  easy  way  to<br />
-invert the moves and restore the list's initial state. Mirko cannot know where node X was prior to each 
-move, only where it ended up. Seeing how Mirko is still recovering from the shock, write a program that finds a minimal sequence of 
-moves that restored the list's initial state from Mirko's logs.</p>
+<ul>
+<li>Danh sách sau thao tác <code>B 3 5</code>.</li>
+</ul>
+<p>Mirko đã chơi chúng trong nhiều giờ, và ghi lại từng thao tác trên một tờ giấy để có thể khôi phục lại trạng thái ban đầu (các nút từ <span class="arithmatex">\(1\)</span> đến <span class="arithmatex">\(N\)</span> có thứ tự từ trái qua phải).</p>
+<p>Khi cậu ấy quyết định khôi phục lại danh sách, Mirko ngạc nhiên khi nhận ra rằng nó không hề dễ để đảo ngược các thao tác và khổi phục lại trạng thái ban đầu. Mirko công thể biết vị trí vị trí ban đầu của nút X trước mỗi thao tác mà chỉ biết nó khi kết thúc thao tác.</p>
+<p>Mirko vẫn chưa hết bàng hoàng, vì vậy hãy viết một chương trình giúp cậu ấy tìm thấy chuỗi các thao tác ngắn nhất có thể để khôi phục lại trạng thái ban đầu của danh sách từ các thao tác đã ghi lại.</p>
 <h4 id="input">Input:</h4>
-<p>The first line of input contains two integers N and K (2 ≤ N ≤ 500 000, 0 ≤ M ≤ 100 000), the number 
-of nodes and the number of moves made by Mirko. Each of the next M rows contains a description of a single move made by Mirko – the type of move 
-('A' or 'B') and two integers X and Y. </p>
+<ul>
+<li>Dòng đầu tiên chứa hai số nguyên <span class="arithmatex">\(N\)</span> và <span class="arithmatex">\(K\)</span> <span class="arithmatex">\((2 \le N \le 5 \times 10^5; 0 \le M \le 10^5)\)</span> là số lượng nút trong danh sách và số lượng thao tác mà Mirko tạo ra. </li>
+<li>Mỗi dòng trong số <span class="arithmatex">\(M\)</span> dòng tiếp theo mô tả một thao tác mà Mirko tạo ra gồm loại thao tác (<code>A</code> hoặc <code>B</code>) và 2 số nguyên <span class="arithmatex">\(X\)</span> và <span class="arithmatex">\(Y\)</span>.</li>
+</ul>
 <h4 id="output">Output:</h4>
-<p>Output the minimum number of moves (call this number K) on the first line. Each  of  the  next  K  lines  should  contain  a  descriptio n   o f   a   s i n g l e   m o v e   i n   t h e   s a m e   f o r m a t   a s   i n   t h e <br />
-input. 
-<strong>Note:</strong> The sequence need not be unique.</p>
+<ul>
+<li>Dòng đầu tiên in ra số lượng thao tác ít nhất (kí hiệu là <span class="arithmatex">\(K\)</span>) tìm được.</li>
+<li>Mỗi dòng trong số <span class="arithmatex">\(K\)</span> dòng tiếp theo in ra một thao tác (với định dạng giống như định dạng thao tác trên <em>Input</em>).
+<strong>Lưu ý:</strong> Chuỗi thao tác có thể có nhiều đáp án.</li>
+</ul>
 <h4 id="scoring">Scoring:</h4>
-<p>If  both  the  number  K  and  the  sequence  of  moves  are  correct,  your  program  will  score  full  points  on<br />
-the test case. If  your  program  outputs  the  correct  number  K  and  does  not  output  the  sequence  of  moves,  or  the<br />
-sequence of moves is incorrect, you will get 60% of the points for that test case.</p>
+<ul>
+<li>Nếu cả 2 số <span class="arithmatex">\(K\)</span> và chuỗi các thao tác là đúng, bạn sẽ được tối đa điểm cho mỗi test. Nếu chương trình của bạn in ra đúng số <span class="arithmatex">\(K\)</span> và không in ra chuỗi các thao tác hoặc in ra chuỗi các thao tác bị sai, bạn sẽ nhận được <span class="arithmatex">\(60\%\)</span> điểm cho mỗi test.</li>
+</ul>
 <h4 id="sample">Sample:</h4>
 <div class="admonition question">
 <p class="admonition-title">Test 1</p>
