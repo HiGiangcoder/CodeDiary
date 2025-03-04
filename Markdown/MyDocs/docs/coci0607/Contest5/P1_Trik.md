@@ -3,7 +3,7 @@ Ghen tị với vị trí trưởng làng của Mirko, Borko chạy thẳng vào
 
 Borko đặt $3$ chiếc cốc nhựa lên bàn, được đặt thẳng hàng và úp xuống, đồng thời một quả bóng nhỏ được đặt bên dưới chiếc cốc trái nhất. Sau đó anh ta đổi chỗ hai chiếc cốc bằng $1$ trong $3$ cách (như hình vẽ dưới) một số lần tuỳ ý. Mirko phải chỉ ra xem quả bóng nằm dưới chiếc cốc nào sau khi Borko hoàn thành việc đổi chỗ.
 
-![image alt](https://imgur.com/ehjtTO6)
+![trik image](prob1.png)
 
 Mirko thông minh khoanh tay mỉm cười trong khi Borko thì khó khăn hơn để di chuyển các chiếc cốc càng nhanh càng tốt. Nhưng anh ta đâu ngờ được rằng một lập trình viên ở đằng sau đã ghi lại tất cả các bước di chuyển và sử dụng một chương trình để xác định xem quả bóng ở đâu. Hãy viết chương trình đó.
 
