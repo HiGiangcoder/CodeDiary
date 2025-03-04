@@ -446,7 +446,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="TENKICI">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du-lieu-vao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dữ liệu vào:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du-lieu-ra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dữ liệu ra:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dữ liệu ra:">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -690,7 +708,25 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="TENKICI">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du-lieu-vao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dữ liệu vào:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#du-lieu-ra" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dữ liệu ra:
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dữ liệu ra:">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -744,6 +780,23 @@
   <h1>Problem 4</h1>
 
 <h3 id="tenkici">TENKICI</h3>
+<p>Xin lỗi về sự hiểu lầm trước đó. Dưới đây là bản dịch tiếng Việt của văn bản bạn yêu cầu:</p>
+<hr />
+<p>Mirko phát hiện một bộ sưu tập gồm <span class="arithmatex">\( N \)</span> chiếc xe tăng cũ từ Thế chiến thứ Hai trong gác xép của ông nội. Anh lập tức gọi bạn mình là Slavko đến để chơi cùng. Họ tạo ra một chiến trường – một tấm ván gỗ bao gồm các ô vuông với <span class="arithmatex">\( N \)</span> hàng và <span class="arithmatex">\( N \)</span> cột.</p>
+<p>Mỗi chiếc xe tăng có thể di chuyển đến một trong bốn ô liền kề trong một lần di chuyển. Một chiếc xe tăng có thể bắn vào bất kỳ ô nào trong cùng một hàng và cột mà nó đang đứng. Xe tăng được coi là "bảo vệ" hàng và cột mà nó đang ở.</p>
+<p>Ngoài ra, không có hai chiếc xe tăng nào có thể đứng ở cùng một ô tại bất kỳ thời điểm nào.</p>
+<p>Sau nhiều giờ chơi và hai lần thử trước, mẹ của Mirko lại la mắng họ phải xuống ăn trưa và họ quyết định sắp xếp lại các chiếc xe tăng sao cho mỗi chiếc xe tăng bảo vệ một hàng và một cột khác nhau (có nghĩa là mỗi hàng và mỗi cột chỉ chứa một chiếc xe tăng).</p>
+<p>Tuy nhiên, họ muốn làm điều này với số lần di chuyển ít nhất.</p>
+<p>Hãy viết một chương trình tìm ra số lần di chuyển ít nhất cần thiết để sắp xếp lại các chiếc xe tăng sao cho mỗi hàng và mỗi cột chứa đúng một chiếc xe tăng, và in ra một chuỗi các bước di chuyển ngắn nhất.</p>
+<hr />
+<h3 id="du-lieu-vao"><strong>Dữ liệu vào:</strong></h3>
+<p>Dòng đầu tiên chứa một số nguyên <span class="arithmatex">\( N \)</span> (<span class="arithmatex">\( 5 \leq N \leq 500 \)</span>). Mỗi dòng tiếp theo chứa hai số nguyên <span class="arithmatex">\( R \)</span> và <span class="arithmatex">\( C \)</span> (<span class="arithmatex">\( 1 \leq R, C \leq N \)</span>), chỉ vị trí hàng và cột của mỗi chiếc xe tăng lúc ban đầu. Không có hai chiếc xe tăng nào ở cùng một ô.</p>
+<h3 id="du-lieu-ra"><strong>Dữ liệu ra:</strong></h3>
+<p>In ra số lượng di chuyển tối thiểu (gọi là <span class="arithmatex">\( K \)</span>) trên dòng đầu tiên. Mỗi dòng tiếp theo sẽ chứa thông tin về một chiếc xe tăng được di chuyển và hướng di chuyển của nó, với số thứ tự của xe tăng và hướng di chuyển được phân tách bởi một khoảng trắng. Hướng có thể là một trong bốn chữ cái in hoa: 'L' (trái), 'R' (phải), 'U' (lên) và 'D' (xuống).</p>
+<p>Lưu ý: Chuỗi các bước di chuyển không nhất thiết phải là duy nhất.</p>
+<p><strong>Chấm điểm:</strong>
+- Nếu cả số lần di chuyển <span class="arithmatex">\( K \)</span> và chuỗi di chuyển đều chính xác, chương trình của bạn sẽ đạt điểm tối đa.
+- Nếu chương trình của bạn chỉ đưa ra số lần di chuyển đúng <span class="arithmatex">\( K \)</span> mà không đưa ra chuỗi di chuyển hoặc chuỗi di chuyển không đúng, bạn sẽ được 60% điểm cho trường hợp kiểm tra đó.</p>
 <p>Mirko  found  a  collection  of  N  toy  tanks  dating  back  to  the  Second  World  War  on  his  grandfather's attic. He promptly called his friend Slavko to play with him. They made a battlefield – a wooden board consisting of squares in N rows and N columns.</p>
 <p>Each tank can be moved to one of the four neighbouring squares in a single move. A tank can shoot at any square in the same row and column. The tank is said to be guarding the row and column it is in. </p>
 <p>Additionally, no two tanks can be in the same square at any time. </p>
