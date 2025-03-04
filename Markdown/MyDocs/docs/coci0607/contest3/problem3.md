@@ -9,7 +9,7 @@ Sau một khoảng thời gian, việc tìm ra bộ ba mới trở nên khó kh�
 
 #### Input:
 - Dòng đầu tiên chứa một số nguyên $n$ $(3 \le n \le 100)$ là kích thước của lưới.
-- Mỗi dòng trong $n$ dòng tiếp theo chứa $n$ ký tự mô tả lưới -- gồm các ký tự in hoa và ký tự '.' (mô tả ô vuông trống).
+- Mỗi dòng trong $n$ dòng tiếp theo chứa $n$ ký tự mô tả lưới gồm các ký tự in hoa và ký tự '.' (mô tả ô vuông trống).
 
 
 #### Output:

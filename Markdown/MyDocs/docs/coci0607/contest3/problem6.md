@@ -1,44 +1,42 @@
 ### LISTA
 
-Mirko received a birthday present from his aunt in the US – a brand-new doubly-linked list (an example 
-of which is shown in the figure below). The list contains N nodes numbered 1 through N. Two types 
-of moves can be done on the list: A)  Move node X in front of node Y. B)  Move node X after node Y.  
+Mirko nhận được món quà sinh nhật từ dì của mình ở Mỹ, món quà là một danh sách liên kết đôi hoàn toàn mới. Danh sách này chứa $N$ nút, được đánh số từ $1$ đến $N$. Có hai loại thao tác trên danh sách:
+- A: Di chuyển nút $X$ đến trước nút $Y$.
+- B: Di chuyển nút $X$ ra sau nút $Y$.
 
 ![prob6_1](prob6_1.png)
 
-An example of a list with 6 nodes. 
+- Ví dụ về danh sách liên kết đôi với 6 nút.
  
 ![prob6_2](prob6_2.png)
 
-The list after the move "A 1 4". 
+- Danh sách sau thao tác `A 1 4`. 
 
 ![prob6_3](prob6_3.png)
 
-The list after another move, "B 3 5". 
- 
-Mirko played with his new toy for hours, writing down each move on a piece of paper so that he can 
-reconstruct the list's initial state (nodes 1 through N in order from left to right). When  he  decided  to  reconstruct  the  list,  Mirko  was  astonished  to  find  that  there  is  no  easy  way  to  
-invert the moves and restore the list's initial state. Mirko cannot know where node X was prior to each 
-move, only where it ended up. Seeing how Mirko is still recovering from the shock, write a program that finds a minimal sequence of 
-moves that restored the list's initial state from Mirko's logs.
+- Danh sách sau thao tác `B 3 5`.
+
+Mirko đã chơi chúng trong nhiều giờ, và ghi lại từng thao tác trên một tờ giấy để có thể khôi phục lại trạng thái ban đầu (các nút từ $1$ đến $N$ có thứ tự từ trái qua phải).
+
+Khi cậu ấy quyết định khôi phục lại danh sách, Mirko ngạc nhiên khi nhận ra rằng nó không hề dễ để đảo ngược các thao tác và khổi phục lại trạng thái ban đầu. Mirko công thể biết vị trí vị trí ban đầu của nút X trước mỗi thao tác mà chỉ biết nó khi kết thúc thao tác.
+
+Mirko vẫn chưa hết bàng hoàng, vì vậy hãy viết một chương trình giúp cậu ấy tìm thấy chuỗi các thao tác ngắn nhất có thể để khôi phục lại trạng thái ban đầu của danh sách từ các thao tác đã ghi lại.
 
 
 #### Input:
-The first line of input contains two integers N and K (2 ≤ N ≤ 500 000, 0 ≤ M ≤ 100 000), the number 
-of nodes and the number of moves made by Mirko. Each of the next M rows contains a description of a single move made by Mirko – the type of move 
-('A' or 'B') and two integers X and Y. 
+- Dòng đầu tiên chứa hai số nguyên $N$ và $K$ $(2 \le N \le 5 \times 10^5; 0 \le M \le 10^5)$ là số lượng nút trong danh sách và số lượng thao tác mà Mirko tạo ra. 
+- Mỗi dòng trong số $M$ dòng tiếp theo mô tả một thao tác mà Mirko tạo ra gồm loại thao tác (`A` hoặc `B`) và 2 số nguyên $X$ và $Y$.
 
 
-#### Output: 
-Output the minimum number of moves (call this number K) on the first line. Each  of  the  next  K  lines  should  contain  a  descriptio n   o f   a   s i n g l e   m o v e   i n   t h e   s a m e   f o r m a t   a s   i n   t h e   
-input. 
-**Note:** The sequence need not be unique.
+#### Output:
+- Dòng đầu tiên in ra số lượng thao tác ít nhất (kí hiệu là $K$) tìm được.
+- Mỗi dòng trong số $K$ dòng tiếp theo in ra một thao tác (với định dạng giống như định dạng thao tác trên *Input*).
+**Lưu ý:** Chuỗi thao tác có thể có nhiều đáp án.
 
 
 #### Scoring: 
-If  both  the  number  K  and  the  sequence  of  moves  are  correct,  your  program  will  score  full  points  on  
-the test case. If  your  program  outputs  the  correct  number  K  and  does  not  output  the  sequence  of  moves,  or  the  
-sequence of moves is incorrect, you will get 60% of the points for that test case.
+- Nếu cả 2 số $K$ và chuỗi các thao tác là đúng, bạn sẽ được tối đa điểm cho mỗi test. Nếu chương trình của bạn in ra đúng số $K$ và không in ra chuỗi các thao tác hoặc in ra chuỗi các thao tác bị sai, bạn sẽ nhận được $60\%$ điểm cho mỗi test.
+
 
 #### Sample:
 

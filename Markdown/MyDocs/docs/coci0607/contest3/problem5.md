@@ -1,23 +1,19 @@
 ### BICIKLI
 
-A  bicycle  race  is  being  organized  in  a  land  far,  far  away.  There  are  N  town  in  the  land,  numbered  1  
-through N. There are also M one-way roads between the towns. The race will start in town 1 and end 
-in town 2. How many different ways can the route be set? Two routes are considered different if they do not use 
-the exact same roads. 
+Một cuộc đua xe đạp đang được tổ thức tại vùng đất xa xôi. Vùng đất này có $N$ thị trấn, được đánh số từ $1$ đến $N$. Có $M$ con đường một chiều giữa các thị trấn. Cuộc đua sẽ bắt đầu tại thị trấn $1$ và kết thúc tại thị trấn $2$. 
 
+Có bao nhiêu cách chọn tuyến đường đua khác nhau? Hai tuyến đường được coi là khác nhau nếu chúng không được tạo bởi chính xác một tập hợp các con đường.
 
 #### Input: 
-The first line of input contains two integers N and M (1 ≤ N ≤ 10 000, 1 ≤ M ≤ 100 000), the number 
-of towns and roads. Each of the next M lines contains two different integers A and B, representing a road between towns A 
-and B. Towns may be connected by more than one road. 
+- Dòng đầu tiên chứa hai số nguyên $N$ và $M$ $(1 \le N \le 10^4; 1 \le M \le 10^5)$ mô tả số thị trấn và số con đường.
+- Mỗi dòng trong số $M$ dòng tiếp hteo chứa 2 số nguyên phân biệt $A$ và $B$, mô tả con đường đi từ $A$ đến $B$. Có thể có nhiều con đường giữa hai thị trấn.
 
 
 #### Output: 
-Output the number of distinct routes that can be set on a single line. If that number has more than nine 
-digits, output only the last nine digits of the number. If there are infinitely many routes, output "inf".
+In ra số lượng tuyến đường khác nhau trên một dòng. Nếu số cần in ra có nhiều hơn 9 chữ số, hãy in ra 9 chữ số cuối cùng (tức là phần dư của $10^9$). Nếu có vô số tuyến đường, in ra `inf`.
 
 
-#### Sample:
+#### Example:
 
 !!! question "Test 1"
     ???+ "Input"

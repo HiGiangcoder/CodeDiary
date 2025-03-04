@@ -1,62 +1,31 @@
 ### TENKICI
 
-Xin lỗi về sự hiểu lầm trước đó. Dưới đây là bản dịch tiếng Việt của văn bản bạn yêu cầu:
+Mirko tìm thấy một bộ sưu tập $N$ chiếc xe tăng đồ chơi cũ từ thời *Thế chiến II* trên gác xép của ông nội. Cậu lập tức gọi bạn mình là Slavko đến để chơi cùng. Họ tạo ra một chiến trường là một tấm ván gỗ bao gồm các ô vuông với $N$ hàng và $N$ cột.
 
----
+Mỗi chiếc xe tăng có thể di chuyển đến một trong bốn ô kề cạnh. Một chiếc xe tăng có thể bắn vào bất kỳ ô vuông nào trên cùng hàng hoặc cùng cột mà nó đang đứng. Một xe tăng được coi là "bảo vệ" hàng và cột mà nó đang đứng.
 
-Mirko phát hiện một bộ sưu tập gồm \( N \) chiếc xe tăng cũ từ Thế chiến thứ Hai trong gác xép của ông nội. Anh lập tức gọi bạn mình là Slavko đến để chơi cùng. Họ tạo ra một chiến trường – một tấm ván gỗ bao gồm các ô vuông với \( N \) hàng và \( N \) cột.
+Ngoài ra, không có 2 xe tăng nào nằm trong cùng một ô vuông tại bất kỳ một thời điểm nào.
 
-Mỗi chiếc xe tăng có thể di chuyển đến một trong bốn ô liền kề trong một lần di chuyển. Một chiếc xe tăng có thể bắn vào bất kỳ ô nào trong cùng một hàng và cột mà nó đang đứng. Xe tăng được coi là "bảo vệ" hàng và cột mà nó đang ở.
+Sauu nhiều giờ chơi, mẹ của Mirko la xuống ăn trưa, vì thế họ quyết định sắp xếp lại những chiếc xe tăng sao cho mỗi chiếc xe tăng đều bảo vệ các hàng và các cột khác nhau (tức là mỗi hàng và mỗi cột đêu chỉ chứa duy nhất một xe tăng).
 
-Ngoài ra, không có hai chiếc xe tăng nào có thể đứng ở cùng một ô tại bất kỳ thời điểm nào.
+Tuy nhiên, họ muốn làm điều đó với số lần di chuyển các xe tăng là ít nhất có thể.
 
-Sau nhiều giờ chơi và hai lần thử trước, mẹ của Mirko lại la mắng họ phải xuống ăn trưa và họ quyết định sắp xếp lại các chiếc xe tăng sao cho mỗi chiếc xe tăng bảo vệ một hàng và một cột khác nhau (có nghĩa là mỗi hàng và mỗi cột chỉ chứa một chiếc xe tăng).
-
-Tuy nhiên, họ muốn làm điều này với số lần di chuyển ít nhất.
-
-Hãy viết một chương trình tìm ra số lần di chuyển ít nhất cần thiết để sắp xếp lại các chiếc xe tăng sao cho mỗi hàng và mỗi cột chứa đúng một chiếc xe tăng, và in ra một chuỗi các bước di chuyển ngắn nhất.
-
----
-
-### **Dữ liệu vào:**
-Dòng đầu tiên chứa một số nguyên \( N \) (\( 5 \leq N \leq 500 \)). Mỗi dòng tiếp theo chứa hai số nguyên \( R \) và \( C \) (\( 1 \leq R, C \leq N \)), chỉ vị trí hàng và cột của mỗi chiếc xe tăng lúc ban đầu. Không có hai chiếc xe tăng nào ở cùng một ô.
-
-### **Dữ liệu ra:**
-In ra số lượng di chuyển tối thiểu (gọi là \( K \)) trên dòng đầu tiên. Mỗi dòng tiếp theo sẽ chứa thông tin về một chiếc xe tăng được di chuyển và hướng di chuyển của nó, với số thứ tự của xe tăng và hướng di chuyển được phân tách bởi một khoảng trắng. Hướng có thể là một trong bốn chữ cái in hoa: 'L' (trái), 'R' (phải), 'U' (lên) và 'D' (xuống).
-
-Lưu ý: Chuỗi các bước di chuyển không nhất thiết phải là duy nhất.
-
-**Chấm điểm:**
-- Nếu cả số lần di chuyển \( K \) và chuỗi di chuyển đều chính xác, chương trình của bạn sẽ đạt điểm tối đa.
-- Nếu chương trình của bạn chỉ đưa ra số lần di chuyển đúng \( K \) mà không đưa ra chuỗi di chuyển hoặc chuỗi di chuyển không đúng, bạn sẽ được 60% điểm cho trường hợp kiểm tra đó.
-
-
-Mirko  found  a  collection  of  N  toy  tanks  dating  back  to  the  Second  World  War  on  his  grandfather's attic. He promptly called his friend Slavko to play with him. They made a battlefield – a wooden board consisting of squares in N rows and N columns.
-
-Each tank can be moved to one of the four neighbouring squares in a single move. A tank can shoot at any square in the same row and column. The tank is said to be guarding the row and column it is in. 
-
-Additionally, no two tanks can be in the same square at any time. 
-
-After  many  hours  of  play  and  two  previous  attempts, Mirko's mom yelled at them to come down for lunch  again,  and  they  decided  to  rearrange  the  tanks  so  that  each  tank  guards  a  different row and column (meaning also that each row and column contains only one tank).
-
-However, they want to do this using the minimum number of moves. 
-
-Write a program that finds the minimum number of moves required to rearrange the tanks so that each row and each column contains a single tank, and one such shortest sequence of moves. 
+Viết một chương trình tìm số lần di chuyển các xe tăng tối thiểu để sắp xếp lại các xe tăng sao cho mỗi hàng và mỗi cột chứa duy nhất một xe, và in ra một chuỗi các bước di chuyển ngắn nhất tìm được.
 
 
 #### Input: 
-The first line of input contains the integer N (5 ≤ N ≤ 500). Each of the following N lines contains two integers R and C (1 ≤ R, S ≤ N), the row and column of a 
-single tank at the moment of mom's call. No two tanks are on the same square. Rows and columns are marked 1 through N, top-down and left-to-right. 
+- Dòng đầu tiên chứa một số nguyên $N$ $(5 \le N \le 500)$. 
+- Mỗi dòng trong số $N$ dòng tiếp theo chứa hai số nguyên $R$ và $C$ $(1 \le R, C \le N)$ mô tả vị trí hàng và cột của mỗi xe tăng tại thời điểm bị mẹ của Mirko gọi đi ăn cơm. Đảm bảo rằng không có bất kỳ hai xe tăng nào nằm trong cùng một ô vuông. Các hàng và các cột được đánh số từ $1$ đến $N$, từ trên xuống dưới và từ trái qua phải.
 
 
 #### Output:
-Output the minimum number of moves (call this number K) on the first line. Each  of  the  next  K  lines  should  contain  the  tank  being  moved  and  the  direction  it  is  moved  in,  
-separated by a single space. Tanks are numbered 1 through N, in the order in which they are given in the input. The direction can be one of four uppercase letters: 'L' for left, 'R' for right, 'U' for up and 'D' for down. 
-Note: The sequence need not be unique. 
-Scoring 
-If  both  the  number  K  and  the  sequence  of  moves  are  correct,  your  program  will  score  full  points  on  
-the test case. If  your  program  outputs  the  correct  number  K  and  does  not  output  the  sequence  of  moves,  or  the  
-sequence of moves is incorrect, you will get 60% of the points for that test case.
+- Dòng đầu tiên in ra số lần di chuyển tối thiểu (ký hiệu là $K$) trên dòng đầu tiên. 
+- Mỗi dòng trong số $K$ dòng tiếp theo, in ra chỉ số của xe tăng được di chuyển và hướng di chuyển của nó (số thứ tự của xe tăng và hướng di chuyển được phân cách bằng một khoảng trắng). Hướng di chuyển của xe tăng được ký hiệu bởi bốn chữ cái in hoa: 'L', 'R', 'U', 'D' lần lượt là trái, phải, trên, dưới.
+- Lưu ý rằng chuỗi các bước di chuyển của xe tăng có thể có nhiều cách.
+ 
+
+#### Scoring 
+Nếu cả hai số $K$ và cách di chuyển là đúng, bạn sẽ nhận được toàn bộ số điểm cho mỗi test. Nếu chương trình của bạn chỉ đúng $K$ và không in ra cách di chuyển hoặc cách di chuyển là sai thì bạn sẽ nhận được $60\%$ cho mỗi test.
 
 
 #### Example:
