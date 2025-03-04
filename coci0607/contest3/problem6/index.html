@@ -496,7 +496,7 @@
           <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
-      Input
+      Input:
     </span>
   </a>
   
@@ -505,7 +505,7 @@
           <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
-      Output
+      Output:
     </span>
   </a>
   
@@ -514,7 +514,16 @@
           <li class="md-nav__item">
   <a href="#scoring" class="md-nav__link">
     <span class="md-ellipsis">
-      Scoring
+      Scoring:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample:
     </span>
   </a>
   
@@ -696,7 +705,7 @@
           <li class="md-nav__item">
   <a href="#input" class="md-nav__link">
     <span class="md-ellipsis">
-      Input
+      Input:
     </span>
   </a>
   
@@ -705,7 +714,7 @@
           <li class="md-nav__item">
   <a href="#output" class="md-nav__link">
     <span class="md-ellipsis">
-      Output
+      Output:
     </span>
   </a>
   
@@ -714,7 +723,16 @@
           <li class="md-nav__item">
   <a href="#scoring" class="md-nav__link">
     <span class="md-ellipsis">
-      Scoring
+      Scoring:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample:
     </span>
   </a>
   
@@ -758,67 +776,71 @@ reconstruct the list's initial state (nodes 1 through N in order from left to ri
 invert the moves and restore the list's initial state. Mirko cannot know where node X was prior to each 
 move, only where it ended up. Seeing how Mirko is still recovering from the shock, write a program that finds a minimal sequence of 
 moves that restored the list's initial state from Mirko's logs.</p>
-<h4 id="input">Input</h4>
+<h4 id="input">Input:</h4>
 <p>The first line of input contains two integers N and K (2 ≤ N ≤ 500 000, 0 ≤ M ≤ 100 000), the number 
 of nodes and the number of moves made by Mirko. Each of the next M rows contains a description of a single move made by Mirko – the type of move 
 ('A' or 'B') and two integers X and Y. </p>
-<h4 id="output">Output</h4>
+<h4 id="output">Output:</h4>
 <p>Output the minimum number of moves (call this number K) on the first line. Each  of  the  next  K  lines  should  contain  a  descriptio n   o f   a   s i n g l e   m o v e   i n   t h e   s a m e   f o r m a t   a s   i n   t h e <br />
 input. 
 <strong>Note:</strong> The sequence need not be unique.</p>
-<h4 id="scoring">Scoring</h4>
+<h4 id="scoring">Scoring:</h4>
 <p>If  both  the  number  K  and  the  sequence  of  moves  are  correct,  your  program  will  score  full  points  on<br />
 the test case. If  your  program  outputs  the  correct  number  K  and  does  not  output  the  sequence  of  moves,  or  the<br />
 sequence of moves is incorrect, you will get 60% of the points for that test case.</p>
+<h4 id="sample">Sample:</h4>
 <div class="admonition question">
 <p class="admonition-title">Test 1</p>
 <details open="open">
 <summary>Input</summary>
-<div class="highlight"><pre><span></span><code>abc
+<div class="highlight"><pre><span></span><code>2 1 
+A 2 1
 </code></pre></div>
 </details>
 <details open="open">
 <summary>Output</summary>
-<div class="highlight"><pre><span></span><code>abc
+<div class="highlight"><pre><span></span><code>1 
+A 1 2
 </code></pre></div>
-</details>
-<details class="warning">
-<summary>Note</summary>
-<p>abc</p>
 </details>
 </div>
 <div class="admonition question">
 <p class="admonition-title">Test 1</p>
 <details open="open">
 <summary>Input</summary>
-<div class="highlight"><pre><span></span><code>abc
+<div class="highlight"><pre><span></span><code>4 3 
+B 1 2 
+A 4 3 
+B 1 4
 </code></pre></div>
 </details>
 <details open="open">
 <summary>Output</summary>
-<div class="highlight"><pre><span></span><code>abc
+<div class="highlight"><pre><span></span><code>2 
+A 1 2 
+B 4 3 
 </code></pre></div>
-</details>
-<details class="warning">
-<summary>Note</summary>
-<p>abc</p>
 </details>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Test 1</p>
+<p class="admonition-title">Test 2</p>
 <details open="open">
 <summary>Input</summary>
-<div class="highlight"><pre><span></span><code>abc
+<div class="highlight"><pre><span></span><code>6 5 
+A 1 4 
+B 2 5 
+B 4 2 
+B 6 3 
+A 3 5
 </code></pre></div>
 </details>
 <details open="open">
 <summary>Output</summary>
-<div class="highlight"><pre><span></span><code>abc
+<div class="highlight"><pre><span></span><code>3 
+A 4 5 
+B 6 5 
+A 2 3
 </code></pre></div>
-</details>
-<details class="warning">
-<summary>Note</summary>
-<p>abc</p>
 </details>
 </div>
 
@@ -871,6 +893,10 @@ sequence of moves is incorrect, you will get 60% of the points for that test cas
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>

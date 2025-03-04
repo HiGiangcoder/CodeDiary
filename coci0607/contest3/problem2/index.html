@@ -423,6 +423,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example:
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -702,6 +711,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example:
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -726,13 +744,19 @@
   <h1>Problem 2</h1>
 
 <h3 id="npuzzle">NPUZZLE</h3>
-<p>N-puzzle is a puzzle that goes by many names and has many variants. In this problem we will use the 15-puzzle. It consists of a 4-by-4 grid of sliding squares where one square is missing. The squares are labeled with uppercase letters 'A' through 'O', with the desired layout as follows:</p>
+<p>N-puzzle là một câu đố có nhiều biến tên và biến thể khác nhau. Trong bài này chúng ta chỉ quan tâm đến biến thể 15-puzzle. Nó bao gồm một lưới <span class="arithmatex">\(4 \times 4\)</span> các ô trượt, trong số đó có một ô vuông bị thiếu. Các ô vuông được gán nhãn bằng các chữ cái in hoa từ 'A' đến 'O' với bố cục mon muốn là như sau:</p>
 <p><img alt="table problem 2" src="../prob2.png" /></p>
-<p>It  can  be  useful  (for  example,  when  solving  the  puzzle  using  a  computer)  to  define  the  "scatter"  of  a puzzle  as  the  sum  of  distances  between  each  square's  current  position  and  its  position  in  the  desired layout. The distance between two squares is their Manhattan distance (the absolute value of the sum of differences between the two rows and the two columns). </p>
-<p>Write a program that calculates the scatter of the given puzzle. </p>
+<p>Ta định nghĩa <strong>"độ phân tán</strong> của câu đố là tổng của các khoảng cách giữa những ô hiện tại và vị trí mong muốn của các ô đó. Khoảng cách giữa hai ô vuông được tính theo <strong>khoảng cách Manhattan</strong> (tức là khoảng cách Manhattan giữa 2 ô <span class="arithmatex">\((x, y)\)</span> và <span class="arithmatex">\((u, v)\)</span> là <span class="arithmatex">\(|x - u| + |y - v|\)</span>).</p>
+<p>Viết một chương trình tính độ phân tán của câu đố bạn nhận được.</p>
 <h4 id="input">Input:</h4>
-<p>Four lines of input contain four characters each, representing the state of the puzzle. </p>
+<ul>
+<li>Gồm 4 dòng, mỗi dòng chứa 4 kí tự biểu diễn trạng thái của câu đố.</li>
+</ul>
 <h4 id="output">Output:</h4>
+<ul>
+<li>Dữ liệu đầu ra gồm một dòng duy nhất là độ phân tán bạn tìm được.</li>
+</ul>
+<h4 id="example">Example:</h4>
 <div class="admonition question">
 <p class="admonition-title">Test 1</p>
 <details open="open">
@@ -815,6 +839,10 @@ MNOK
     
     
       <script src="../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
