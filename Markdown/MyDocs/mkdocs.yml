@@ -19,17 +19,58 @@ extra_javascript:
 
 nav:
   - Home: index.md
-  - About: about.md
-  - Material: material.md
-  - COCI 2006 - 2007:
+  - Other: other.md
+  - COCI 2006 2007:
+    - General: coci0607/general.md
+    
+    - Contest 1:
+      - MODULO: coci0607/Contest1/P1_MODULO.md
+      - HERMAN: coci0607/Contest1/P2_HERMAN.md
+      - OKVIRI: coci0607/Contest1/P3_OKVIRI.md
+      - SLIKAR: coci0607/Contest1/P4_SLIKAR.md
+      - BOND: coci0607/Contest1/P5_BOND.md
+      - DEBUG: coci0607/Contest1/P6_DEBUG.md
+    - Contest 2: 
+      - R2: coci0607/Contest2/P1_R2.md
+      - ABC: coci0607/Contest2/P2_ABC.md
+      - KOLONE: coci0607/Contest2/P3_KOLONE.md
+      - SJECISTA: coci0607/Contest2/P4_SJECISTA.md
+      - STOL: coci0607/Contest2/P5_STOL.md
+      - STRAZA: coci0607/Contest2/P6_STRAZA.md
     - Contest 3:
-      - Problem 1: coci0607/contest3/problem1.md
-      - Problem 2: coci0607/contest3/problem2.md
-      - Problem 3: coci0607/contest3/problem3.md
-      - Problem 4: coci0607/contest3/problem4.md
-      - Problem 5: coci0607/contest3/problem5.md
-      - Problem 6: coci0607/contest3/problem6.md
+      - PATULJCI: coci0607/Contest3/P1_PATULJCI.md
+      - NPUZZLE: coci0607/Contest3/P2_NPUZZLE.md
+      - TROJKE: coci0607/Contest3/P3_TROJKE.md
+      - TENKICI: coci0607/Contest3/P4_TENKICI.md
+      - BICIKLI: coci0607/Contest3/P5_BICIKLI.md
+      - LISTA: coci0607/Contest3/P6_LISTA.md
+    - Contest 4:
+      - SIBICE: coci0607/Contest4/P1_Sibice.md
+      - SKENER: coci0607/Contest4/P2_Skener.md
+      - PRSTENI: coci0607/Contest4/P3_Prsteni.md
+      - ZBRKA: coci0607/Contest4/P4_Zbrka.md
+      - JOGURT: coci0607/Contest4/P5_Jogurt.md
+      - ISPITI: coci0607/Contest4/P6_Ispiti.md
+    - Contest 5:
+      - TRIK: coci0607/Contest5/P1_Trik.md
+      - NATRIJ: coci0607/Contest5/P2_Natrij.md  
+      - TENIS: coci0607/Contest5/P3_Tenis.md
+      - LIGA: coci0607/Contest5/P4_Liga.md
+      - IVANA: coci0607/Contest5/P5_Ivana.md
+      - DVAPUT: coci0607/Contest5/P6_Dvaput.md
+    - Contest 6:
+      - PRASE: coci0607/Contest6/P1_PRASE.md
+      - MAGIJA: coci0607/Contest6/P2_MAGIJA.md
+      - MARATON: coci0607/Contest6/P3_MARATON.md
+      - KAMEN: coci0607/Contest6/P4_KAMEN.md
+      - V: coci0607/Contest6/P5_V.md
+      - PROSTOR: coci0607/Contest6/P6_PROSTOR.md
+    - Regional:
+      - BARD: coci0607/Regional/P1_BARD.md
+      - TETRIS: coci0607/Regional/P2_TETRIS.md
+      - CIRCLE: coci0607/Regional/P4_CIRCLE.md
     - Croatian Olympiad: 
-      - Problem 1: coci0607/olympiad/problem1.md
-      - Problem 2: coci0607/olympiad/problem2.md
-      - Problem 3: coci0607/olympiad/problem3.md
+      - PATRIK: coci0607/Olympiad/P1_PATRIK.md
+      - POLICIJA: coci0607/Olympiad/P2_POLICIJA.md
+      - SABOR: coci0607/Olympiad/P3_SABOR.md
+    
