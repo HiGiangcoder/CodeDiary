@@ -1,8 +1,22 @@
 site_name: My Documentation
 theme:
   name: 'material'
+  palette:
+    - scheme: default  # Light Mode
+      primary: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    - scheme: slate  # Dark Mode
+      primary: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 markdown_extensions:
+  - pymdownx.tasklist
+
   - admonition  # Hộp ghi chú
   - pymdownx.details  # Mở rộng ghi chú
   - pymdownx.superfences  # Hỗ trợ code block nâng cao
@@ -16,6 +30,14 @@ markdown_extensions:
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+plugins:
+  - search
+#  - pdf-export
+  - awesome-pages
+  - minify:
+      minify_html: true
+  - glightbox
 
 nav:
   - Home: index.md
