@@ -1,6 +1,7 @@
 ### LISTA
 
 Mirko nhận được món quà sinh nhật từ dì của mình ở Mỹ, món quà là một danh sách liên kết đôi hoàn toàn mới. Danh sách này chứa $N$ nút, được đánh số từ $1$ đến $N$. Có hai loại thao tác trên danh sách:
+
 - A: Di chuyển nút $X$ đến trước nút $Y$.
 - B: Di chuyển nút $X$ ra sau nút $Y$.
 
