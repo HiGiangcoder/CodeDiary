@@ -1,6 +1,11 @@
 site_name: My Documentation
+
+extra_css:
+  - assets/extra.css
+
 theme:
   name: 'material'
+
   palette:
     - scheme: default  # Light Mode
       primary: indigo
@@ -13,6 +18,10 @@ theme:
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
+  font:
+    text: Merriweather 
+    code: JetBrains Mono
+
 
 markdown_extensions:
   - pymdownx.tasklist
@@ -32,9 +41,10 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 plugins:
-  - search
-#  - pdf-export
   - awesome-pages
+  - search
+  - include-markdown
+  # - pdf-export
   - minify:
       minify_html: true
   - glightbox
@@ -42,6 +52,14 @@ plugins:
 nav:
   - Home: index.md
   - Other: other.md
+
+  - Tài nguyên học tập:
+    - Các kiến trúc, mô hình AI và các kĩ thuật:
+      - LeNet-5: Learning/AI_Model/lenet5.md
+      - UNet: Learning/AI_Model/unet.md
+    - Xác suất thống kê:
+      - Bài tập về nhà buổi 2: Learning/XSTK/homework_b2.md
+    
   - COCI 2006 2007:
     - General: coci0607/general.md
     
