@@ -6,14 +6,11 @@
 ## Bài 1. 
 Bắn 3 viên đạn một cách độc lập vào một bia. Xác suất trúng bia của mỗi viên lần lượt là 0.6; 0.9; 0.7. Tìm xác suất: 
 
-### 1. Có đúng một viên trúng đích.
+1. Có đúng một viên trúng đích.
 
-- Gọi A, B, C lần lượt là biến cố viên đạn 1, 2, 3 trúng vào một bia.
-- Khi đó xác suất có đúng một viên trúng đích là:
+2. Có ít nhất một viên trúng đích.
 
-$$ P(A) * P(\neg B) * P(\neg C) + P(\neg A) * P(B) * P(\neg C) + P(\neg A) * P(\neg B) * P(C)$$
-
-### 2. Có ít nhất một viên trúng đích.
+![hình ảnh bài tập 1](b1.png)
 
 
 ## Bài 2. 
@@ -23,6 +20,8 @@ Có 3 hộp phấn.
 - Hộp II có 10 viên tốt và 4 viên xấu; 
 - Hộp III có 20 viên tốt và 10 viên xấu. 
 - Lấy ngẫu nhiên mỗi hộp 1 viên phấn. Tìm xác suất được ít nhất một viên phấn tốt.
+
+![hình ảnh bài tập 2](b2.png)
 
 
 ## Bài 3. 
@@ -70,3 +69,30 @@ int main() {
 ## Bài 4. 
 Viết chương trình tính gần đúng hàm Laplace ![hàm Laplace](laplace.png) (Đáp số gần đúng: Chẳng hạn khi $x= 1.96$ thì giá trị hàm Laplace là $0.475$)
 
+**Code:**
+
+```python
+import numpy as np
+
+# np.pi np.e
+
+def Laplace(x):
+    res = 0
+    numrep = 10**7
+    dt = x / numrep
+    for i in range(numrep):
+        t = i * dt
+        f = np.e ** (-t * t / 2)
+        res += f * dt
+        
+    res /= np.sqrt(2 * np.pi)
+    return res
+        
+print(Laplace(1.96))
+```
+
+**Output:**
+
+```
+0.4750021382210453
+```
