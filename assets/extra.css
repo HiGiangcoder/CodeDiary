@@ -46,3 +46,7 @@ margin: 0 auto;
     border-left: 4px solid #673AB7;
     background-color: #F3E5F5;
 }
+
+.md-sidebar__inner .md-nav__list {
+    display: block !important;
+}
