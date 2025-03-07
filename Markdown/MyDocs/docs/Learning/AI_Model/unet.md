@@ -158,49 +158,18 @@ print(output.shape)  # Kích thước đầu ra: (1, 1, 388, 388)
 - Kích thước đầu vào và đầu ra của UNet phụ thuộc vào kích thước của ảnh đầu vào và số lượng lớp cần phân đoạn.
 - Bạn có thể điều chỉnh số lượng kênh, số lượng lớp, và các tham số khác để phù hợp với bài toán cụ thể của mình.
 
-#### Giải thích một số hàm "lạ":
-##### 1.1. Về hàm `nn.ConvTranspose2d`:
-```python
-def upconv_block(self, in_channels, out_channels):
-    return nn.ConvTranspose2d(in_channels, out_channels, kernel_size=2, stride=2)
-```
 
-![Convolution Transpose](unet/convtranspose.png)
+### 2. Bản vẽ tay giải thích về UNet và các layer.
+![draw unet](unet/draw_unet.png)
 
+### 3. U-Net for Building Segmenttation - PyTorch (Kaggle)
+- [link](https://www.kaggle.com/code/balraj98/unet-for-building-segmentation-pytorch)
 
-##### 1.2. Về hàm `Crop tensor`:
-```python
-def crop_tensor(self, tensor, target_size):
-    _, _, H, W = tensor.size()
-    diffY = (H - target_size[0]) // 2
-    diffX = (W - target_size[1]) // 2
-    return tensor[:, :, diffY:(diffY + target_size[0]), diffX:(diffX + target_size[1])]
-```
+### 4. Unet Architecture image segmentation
+- [UNet (Jupyter notebook)](unet/UNet.ipynb)
 
-- Hàm trên sẽ cắt các phần dư thừa của tensor được truyển vào sao cho có size giống với target_size
-
-**Giải thích về: `dec1.shape[2:]`:**
-
-- dec1.shape có dạng $(batch_size, channels, height, width)$.
-
-- `dec1.shape[2:]` trả về một tuple chứa hai giá trị: $(height, width)$ của tensor dec1.
-
-- Ví dụ: Nếu dec1 có kích thước $(1, 64, 388, 388)$, thì `dec1.shape[2:]` sẽ trả về $(388, 388)$.
-
-
-
-
-#### 1.3. Về hàm `torch.cat()`:
-```python
-torch.cat((dec4, enc4), dim=1)
-```
-
-- Gộp 2 dec4 và enc4 lại theo chiều 1 (tức là tăng số lượng channel lên).
 
 ---
-
-### 2. Bản vẽ tay giải thích cụ thể về UNet và các layer.
-![draw unet](unet/draw_unet.png)
 
 ## Phần III: Cách cài đặt UNet bằng PyTorch
 

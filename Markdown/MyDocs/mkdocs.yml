@@ -1,5 +1,7 @@
 site_name: My Documentation
 
+extra_javascript:
+  - assets/popup.js
 extra_css:
   - assets/extra.css
 
@@ -54,7 +56,8 @@ extra_javascript:
 
 plugins:
   - awesome-pages
-  # - jupyter 
+  - mkdocs-jupyter:
+      execute: false  # Để không chạy lại notebook khi hiển thị
   - search
   - include-markdown
   # - pdf-export
@@ -63,14 +66,13 @@ plugins:
   - glightbox
 
 nav:
-  - Home: index.md
+  - Home: home/index.md
 
   - Tài nguyên học tập:
     - Các kiến trúc, mô hình AI và các kĩ thuật:
       - LeNet-5: Learning/AI_Model/lenet5.md
       - UNet: Learning/AI_Model/unet.md
-      - Deadline Unet: Learning/AI_Model/UNet.ipynb
-      - Code ví dụ về kiến trúc UNet: Learning/AI_Model/vd_unet.md
+      - Các kiến thức cần thiết: Learning/AI_Model/essential.md
     - Xác suất thống kê:
       - Bài tập về nhà buổi 2: Learning/XSTK/Exercise2/homework.md
       - Bài tập về nhà buổi 3: Learning/XSTK/Exercise3/homework.md
@@ -154,4 +156,4 @@ nav:
         - CESTARINE: Problem/coci0708/Contest6/P6_CESTARINE.md
 
 
-  - Other: other.md
+  - Other: other/other.md
