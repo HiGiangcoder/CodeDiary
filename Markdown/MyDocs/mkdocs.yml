@@ -6,7 +6,7 @@ extra_css:
 theme:
   name: 'material'
 
-  features:
+  features:  
     - navigation.tabs        # Hiển thị thanh bên trên
     - navigation.tabs.sticky # Giữ thanh trên cố định khi cuộn
     # - navigation.sections    # Cho phép các mục cha có con
@@ -14,7 +14,7 @@ theme:
     - navigation.instant     # Load nhanh không tải lại trang
     - navigation.path        # Hiển thị đường dẫn của trang
     - navigation.indexes     # Cho phép mở rộng các mục con
-    # - navigation.expand      # (Comment dòng này nếu muốn mặc định thu nhỏ)
+    - navigation.expand      # (Comment dòng này nếu muốn mặc định thu nhỏ)
     - navigation.top         # Nút trở lên đầu
     - navigation.tracking    # Theo dõi mục đang đọc
 
@@ -54,6 +54,7 @@ extra_javascript:
 
 plugins:
   - awesome-pages
+  # - jupyter 
   - search
   - include-markdown
   # - pdf-export
@@ -68,8 +69,11 @@ nav:
     - Các kiến trúc, mô hình AI và các kĩ thuật:
       - LeNet-5: Learning/AI_Model/lenet5.md
       - UNet: Learning/AI_Model/unet.md
+      - Deadline Unet: Learning/AI_Model/UNet.ipynb
+      - Code ví dụ về kiến trúc UNet: Learning/AI_Model/vd_unet.md
     - Xác suất thống kê:
-      - Bài tập về nhà buổi 2: Learning/XSTK/Exercise2/homework_b2.md
+      - Bài tập về nhà buổi 2: Learning/XSTK/Exercise2/homework.md
+      - Bài tập về nhà buổi 3: Learning/XSTK/Exercise3/homework.md
     
   - CP-Problem: 
     - COCI 2006 2007:
