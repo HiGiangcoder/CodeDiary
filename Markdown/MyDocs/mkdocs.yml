@@ -16,7 +16,7 @@ theme:
     - navigation.instant     # Load nhanh không tải lại trang
     - navigation.path        # Hiển thị đường dẫn của trang
     - navigation.indexes     # Cho phép mở rộng các mục con
-    - navigation.expand      # (Comment dòng này nếu muốn mặc định thu nhỏ)
+    # - navigation.expand      # (Comment dòng này nếu muốn mặc định thu nhỏ)
     - navigation.top         # Nút trở lên đầu
     - navigation.tracking    # Theo dõi mục đang đọc
 
@@ -39,6 +39,7 @@ theme:
 
 markdown_extensions:
   - pymdownx.tasklist
+      # collapse: true  # Đảm bảo các mục trong <details> không tự mở
 
   - admonition  # Hộp ghi chú
   - pymdownx.details  # Mở rộng ghi chú
@@ -66,20 +67,69 @@ plugins:
   - glightbox
 
 nav:
-  - Home: home/index.md
+  - Home: 
+    - Home: home/index.md
+    - About: home/about.md
 
-  - Tài nguyên học tập:
+  - Kiến thức lập trình:
     - Các kiến trúc, mô hình AI và các kĩ thuật:
-      - LeNet-5: Learning/AI_Model/lenet5.md
+      - Lenet-5:
+        - Overview: Learning/AI_Model/lenet5.md
+        - Tutorial part 1: Learning/AI_Model/lenet/lenetpart1.md
+        - Tutorial part 2: Learning/AI_Model/lenet/lenetpart2.md
+         
       - UNet: Learning/AI_Model/unet.md
       - Các kiến thức cần thiết: Learning/AI_Model/essential.md
+      
+
+    - Python:
+      - Numpy 1: Learning/Python/Numpy_1.ipynb
+      - Numpy 2: Learning/Python/Numpy_2.ipynb
+      - Pandas: Learning/Python/Pandas.ipynb
+      - Pandas exercise 1: Learning/Python/Python_Pandas_exercise1.ipynb
+      - Pandas 2: Learning/Python/Pandas2.ipynb
+      - Pandas exercise 2: Learning/Python/Python_Pandas_exercise2.ipynb
+      - Pandas Join Combine: Learning/Python/Pandas_Join_Combine.ipynb
+
+    - PyTorch:
+      - 0 Pytorch Fundamentals (ipynb): Learning/Pytorch/00_pytorch_fundamentals.ipynb
+      - 0 Deep learning fundamentals (pdf): Learning/Pytorch/00_pytorch_and_deep_learning_fundamentals.pdf
+      - 1 Pytorch workflow (ipynb): Learning/Pytorch/01_pytorch_workflow.ipynb
+      - 1 Pytorch workflow (pdf): Learning/Pytorch/01_pytorch_workflow.pdf
+      - 2 classification (ipynb): Learning/Pytorch/02_pytorch_classification.ipynb
+      - 3 Computer vision (ipynb): Learning/Pytorch/03_pytorch_computer_vision.ipynb
+      - 3 Compupter vision (pdf): Learning/Pytorch/03_pytorch_computer_vision.pdf
+      - 4 Custom datasets (pdf): Learning/Pytorch/04_pytorch_custom_datasets.ipynb
+      - 5 Going moduler (pdf): Learning/Pytorch/05_pytorch_going_modular.pdf
+      - 6 Transfer learning (ipynb): Learning/Pytorch/06_pytorch_transfer_learning.ipynb
+      - 6 Transfer learning (pdf): Learning/Pytorch/06_pytorch_transfer_learning.pdf
+      - 7 Experiment tracking (ipynb): Learning/Pytorch/07_pytorch_experiment_tracking.ipynb
+      - 7 Experiment tracking (pdf): Learning/Pytorch/07_pytorch_experiment_tracking.pdf
+      - 8 Paper replicating (ipynb): Learning/Pytorch/08_pytorch_paper_replicating.ipynb
+      - 8 Paper replicating (pdf): Learning/Pytorch/08_pytorch_paper_replicating.pdf
+      - 9 Model deployment(pdf): Learning/Pytorch/09_pytorch_model_deployment.pdf
+
+    - Tensorflow:
+      - 0 Tensorflow fundamentals: Learning/Tensorflow/00_tensorflow_fundamentals.ipynb
+      - 1 Neural network regression: Learning/Tensorflow/01_neural_network_regression_in_tensorflow.ipynb
+      - 2 Neural network classification: Learning/Tensorflow/02_neural_network_classification_in_tensorflow.ipynb
+      - 4 Transfer learning: Learning/Tensorflow/04_transfer_learning_in_tensorflow_part_1_feature_extraction.ipynb
+      - 10 Time series forecasting: Learning/Tensorflow/10_time_series_forecasting_in_tensorflow.ipynb
+
+
+    - OOP Practice: Learning/OOP_Practice.ipynb
+
+    - Visualization: Learning/Visualization.ipynb
+
+  - Môn học:
     - Xác suất thống kê:
-      - Bài tập về nhà buổi 2: Learning/XSTK/Exercise2/homework.md
-      - Bài tập về nhà buổi 3: Learning/XSTK/Exercise3/homework.md
-    
+      - Bài tập về nhà buổi 2: Subject/XSTK/Exercise2/homework.md
+      - Bài tập về nhà buổi 3: Subject/XSTK/Exercise3/homework.md
+
   - CP-Problem: 
+    - General: Problem/general.md
     - COCI 2006 2007:
-      - General: Problem/coci0607/General.md
+      - Overview: Problem/coci0607/Overview.md
       
       - Contest 1:
         - MODULO: Problem/coci0607/Contest1/P1_MODULO.md
@@ -132,7 +182,7 @@ nav:
         - POLICIJA: Problem/coci0607/Olympiad/P2_POLICIJA.md
         - SABOR: Problem/coci0607/Olympiad/P3_SABOR.md
     - COCI 2007 2008:
-      - General: Problem/coci0708/General.md
+      - Overview: Problem/coci0708/Overview.md
       - Contest 1: 
         - CETVRTA: Problem/coci0708/Contest1/P1_CETVRTA.md
         - PEG: Problem/coci0708/Contest1/P2_PEG.md

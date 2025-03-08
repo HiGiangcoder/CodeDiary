@@ -44,6 +44,7 @@ _(Hình minh họa: Băng thông nhỏ vs vừa vs lớn)_
 ---
 
  **c. So sánh Histogram và KDE**
+ 
 | Đặc điểm | Histogram | KDE |
 |----------|------------|------------|
 | Dạng biểu diễn | Cột rời rạc | Đường cong liên tục |
@@ -54,7 +55,7 @@ _(Hình minh họa: Băng thông nhỏ vs vừa vs lớn)_
 👉 **Histogram phù hợp khi cần đếm số lượng**  
 👉 **KDE phù hợp khi muốn hiểu rõ hơn về phân phối thực sự của dữ liệu**  
 
-### 2. upconv `nn.ConvTranspose2d`:
+### 2. Upconv (Convolution transpose) `nn.ConvTranspose2d`:
 ```python
 def upconv_block(self, in_channels, out_channels):
     return nn.ConvTranspose2d(in_channels, out_channels, kernel_size=2, stride=2)
@@ -63,7 +64,64 @@ def upconv_block(self, in_channels, out_channels):
 ![Convolution Transpose](unet/convtranspose.png)
 
 
-### 3. crop image `Crop tensor`:
+### 3. Upsampling (Upsample) `torch.nn.Upsample(scale_factor, mode)`
+**Upsampling trong PyTorch** được sử dụng để tăng kích thước tensor bằng phương pháp nội suy. Dưới đây là các chế độ (`mode`) phổ biến của `nn.Upsample`:  
+
+---
+
+#### **1. Nearest Neighbor (`'nearest'`)**  
+- Đơn giản nhất, lặp lại giá trị của pixel lân cận gần nhất.  
+- Không tạo hiệu ứng làm mịn, có thể gây răng cưa.  
+- **Cú pháp:**  
+  ```python
+  import torch.nn as nn
+
+  upsample = nn.Upsample(scale_factor=2, mode='nearest')
+  ```
+
+---
+
+#### **2. Bilinear (`'bilinear'`)**  
+- Dùng nội suy tuyến tính 2D để tạo pixel mới dựa trên các giá trị xung quanh.  
+- Mịn hơn so với `'nearest'`.  
+- **Cần `align_corners=True/False` để kiểm soát cách nội suy.**  
+- **Cú pháp:**  
+  ```python
+  upsample = nn.Upsample(scale_factor=2, mode='bilinear', align_corners=True)
+  ```
+
+---
+
+#### **3. Bicubic (`'bicubic'`)**  
+- Nội suy bậc ba, mịn hơn **bilinear**.  
+- Thường dùng để upscale ảnh chất lượng cao.  
+- **Cú pháp:**  
+  ```python
+  upsample = nn.Upsample(scale_factor=2, mode='bicubic', align_corners=True)
+  ```
+
+---
+
+#### **4. Trilinear (`'trilinear'`)**  
+- Nội suy tuyến tính trong **3D** (cho dữ liệu 3D như video, y tế).  
+- **Cú pháp:**  
+  ```python
+  upsample = nn.Upsample(scale_factor=2, mode='trilinear', align_corners=True)
+  ```
+
+---
+
+#### **So sánh nhanh**  
+| Mode        | Làm mịn? | Độ phức tạp | Ứng dụng chính |
+|------------|---------|-------------|----------------|
+| `'nearest'` | ❌       | Thấp        | Upsampling nhanh, không làm mịn |
+| `'bilinear'` | ✅      | Trung bình  | Làm mịn ảnh 2D |
+| `'bicubic'` | ✅✅     | Cao         | Tăng độ phân giải chất lượng cao |
+| `'trilinear'` | ✅     | Cao         | Nội suy trên dữ liệu 3D |
+
+
+
+### 4. crop image `Crop tensor`:
 ```python
 def crop_tensor(self, tensor, target_size):
     _, _, H, W = tensor.size()
@@ -84,7 +142,7 @@ def crop_tensor(self, tensor, target_size):
 
 
 
-### 4. `torch.cat()`:
+### 5. `torch.cat()`:
 ```python
 torch.cat((dec4, enc4), dim=1)
 ```
@@ -92,7 +150,7 @@ torch.cat((dec4, enc4), dim=1)
 - Gộp 2 dec4 và enc4 lại theo chiều 1 (tức là tăng số lượng channel lên).
 
 
-### 5.  `nn.BatchNorm2d()`:
+### 6.  `nn.BatchNorm2d()`:
 
 **Batch Normalization là gì?**  
 
@@ -175,4 +233,4 @@ plt.show()
 4. **Tổng quát hóa tốt hơn**: BatchNorm giúp mô hình tránh bị overfitting nhờ tác dụng tương tự dropout.  
 
 
-### 6. 
+### 7. 
