@@ -134,7 +134,7 @@ def crop_tensor(self, tensor, target_size):
 
 **Giải thích về: `dec1.shape[2:]`:**
 
-- dec1.shape có dạng $(batch_size, channels, height, width)$.
+- dec1.shape có dạng $(batch\_size, channels, height, width)$.
 
 - `dec1.shape[2:]` trả về một tuple chứa hai giá trị: $(height, width)$ của tensor dec1.
 
@@ -142,7 +142,7 @@ def crop_tensor(self, tensor, target_size):
 
 
 
-### 5. `torch.cat()`:
+### 5. torch cat `torch.cat()`:
 ```python
 torch.cat((dec4, enc4), dim=1)
 ```
@@ -150,7 +150,7 @@ torch.cat((dec4, enc4), dim=1)
 - Gộp 2 dec4 và enc4 lại theo chiều 1 (tức là tăng số lượng channel lên).
 
 
-### 6.  `nn.BatchNorm2d()`:
+### 6. Batch normalization `nn.BatchNorm2d()`:
 
 **Batch Normalization là gì?**  
 
