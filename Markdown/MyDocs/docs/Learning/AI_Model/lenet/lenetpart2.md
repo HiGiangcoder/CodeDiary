@@ -168,6 +168,7 @@ transform_augmented = transforms.Compose([
 
 Một mô hình hoàn chỉnh sử dụng `EarlyStopping`, `train_model`, `validate_model`, và `ReduceLROnPlateau` có thể được tìm thấy trong tài liệu gốc.
 
----
 
-_Tài liệu hướng dẫn bởi Nguyễn Trường Giang - Ngày 6 tháng 2 năm 2025._
+
+
+_Tài liệu tổng hợp bởi Nguyễn Trường Giang - Ngày 6 tháng 2 năm 2025._

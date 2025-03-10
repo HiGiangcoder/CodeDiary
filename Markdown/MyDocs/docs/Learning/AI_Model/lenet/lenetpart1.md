@@ -17,17 +17,17 @@
   - [Mô tả chi tiết về các Layer](#mô-tả-chi-tiết-về-các-layer)
     - [Convolutional Layer](#convolutional-layer)
     - [Pooling layer (Downsampling)](#pooling-layer-downsampling)
-    - [Hàm `nn.Flatten()`](#hàm-nnflatten)
-    - [Hàm `nn.Linear()`](#hàm-nnlinear)
+    - [Hàm $nn.Flatten()$](#hàm-nnflatten)
+    - [Hàm $nn.Linear()$](#hàm-nnlinear)
   - [Một số hàm cần thiết cho việc build LeNet-5 model](#một-số-hàm-cần-thiết-cho-việc-build-lenet-5-model)
     - [**Loss functions**:](#loss-functions)
     - [**Các hàm optimizers**:](#các-hàm-optimizers)
   - [Một số Activation function phi tuyến phổ biến](#một-số-activation-function-phi-tuyến-phổ-biến)
-    - [**ReLU**: `max(0, x)`](#relu-max0-x)
-    - [**Leaky ReLU**: `max(αx, x)`](#leaky-relu-maxαx-x)
-    - [**Sigmoid**: `1 / (1 + e^-x)`](#sigmoid-1--1--e-x)
-    - [**Tanh**: `(e^x - e^-x) / (e^x + e^-x)`](#tanh-ex---e-x--ex--e-x)
-    - [**Softmax**: `e^x_i / sum(e^x_j)`](#softmax-ex_i--sumex_j)
+    - [**ReLU**:](#relu)
+    - [**Leaky ReLU**:](#leaky-relu)
+    - [**Sigmoid**:](#sigmoid)
+    - [**Tanh**:](#tanh)
+    - [**Softmax**:](#softmax)
   - [Ví dụ về một LeNet-5 phân loại thời trang](#ví-dụ-về-một-lenet-5-phân-loại-thời-trang)
 
 ---
@@ -86,7 +86,7 @@ LeNet-5 được thiết kế chủ yếu để nhận dạng chữ số viết 
   torch.nn.MaxPool2d(kernel_size, stride=None, padding=0)
   ```
 
-### Hàm `nn.Flatten()`
+### Hàm $nn.Flatten()$
 
 - **Chuyển tensor nhiều chiều thành tensor một chiều**.
 - **Cú pháp**:
@@ -94,7 +94,7 @@ LeNet-5 được thiết kế chủ yếu để nhận dạng chữ số viết 
   torch.nn.Flatten(start_dim=1, end_dim=-1)
   ```
 
-### Hàm `nn.Linear()`
+### Hàm $nn.Linear()$
 
 - **Tạo một lớp fully connected**.
 - **Cú pháp**:
@@ -116,7 +116,9 @@ LeNet-5 được thiết kế chủ yếu để nhận dạng chữ số viết 
 
 ## Một số Activation function phi tuyến phổ biến
 
-### **ReLU**: `max(0, x)`
+### **ReLU**:
+**Formula:** $max(0, x)$
+
 ```python
 import torch
 import torch.nn.functional as F
@@ -125,25 +127,33 @@ relu_output = F.relu(x)
 print(relu_output)
 ```
 
-### **Leaky ReLU**: `max(αx, x)`
+### **Leaky ReLU**:
+**Formula** $max(αx, x)$
+
 ```python
 leaky_relu = F.leaky_relu(x, negative_slope=0.01)
 print(leaky_relu)
 ```
 
-### **Sigmoid**: `1 / (1 + e^-x)`
+### **Sigmoid**:
+**Formula:** $1 / (1 + e^-x)$
+
 ```python
 sigmoid_output = torch.sigmoid(x)
 print(sigmoid_output)
 ```
 
-### **Tanh**: `(e^x - e^-x) / (e^x + e^-x)`
+### **Tanh**: 
+**Formula:** $(e^x - e^-x) / (e^x + e^-x)$
+
 ```python
 tanh_output = torch.tanh(x)
 print(tanh_output)
 ```
 
-### **Softmax**: `e^x_i / sum(e^x_j)`
+### **Softmax**: 
+**Formula:** $e^x_i / sum(e^x_j)$
+
 ```python
 softmax_output = F.softmax(x, dim=0)
 print(softmax_output)
@@ -181,7 +191,3 @@ class LeNet5(nn.Module):
         x = self.fc3(x)
         return x
 ```
-
----
-
-Tài liệu này cung cấp kiến thức cơ bản về LeNet-5 và cách triển khai mô hình bằng PyTorch. Hy vọng nó sẽ hữu ích cho bạn!

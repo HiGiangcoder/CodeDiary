@@ -57,8 +57,8 @@ extra_javascript:
 
 plugins:
   - awesome-pages
-  - mkdocs-jupyter:
-      execute: false  # Để không chạy lại notebook khi hiển thị
+  # - mkdocs-jupyter:
+  #     execute: false  # Để không chạy lại notebook khi hiển thị
   - search
   - include-markdown
   # - pdf-export
@@ -74,52 +74,54 @@ nav:
   - Kiến thức lập trình:
     - Các kiến trúc, mô hình AI và các kĩ thuật:
       - Lenet-5:
-        - Overview: Learning/AI_Model/lenet5.md
+        - Overview: Learning/AI_Model/lenet/lenet5.md
         - Tutorial part 1: Learning/AI_Model/lenet/lenetpart1.md
         - Tutorial part 2: Learning/AI_Model/lenet/lenetpart2.md
-         
-      - UNet: Learning/AI_Model/unet.md
+        - Lenet-5 (Final Project 1): Learning/AI_Model/lenet/Lenet5_MNIST.md
+      - UNet: 
+        - Unet tutorial: Learning/AI_Model/unet/unet.md
+        - UNet (Final Project 2): Learning/AI_Model/unet/unet_model.md
       - Các kiến thức cần thiết: Learning/AI_Model/essential.md
       
 
     - Python:
-      - Numpy 1: Learning/Python/Numpy_1.ipynb
-      - Numpy 2: Learning/Python/Numpy_2.ipynb
-      - Pandas: Learning/Python/Pandas.ipynb
-      - Pandas exercise 1: Learning/Python/Python_Pandas_exercise1.ipynb
-      - Pandas 2: Learning/Python/Pandas2.ipynb
-      - Pandas exercise 2: Learning/Python/Python_Pandas_exercise2.ipynb
-      - Pandas Join Combine: Learning/Python/Pandas_Join_Combine.ipynb
+      - Numpy 1: Learning/Python/Numpy_1.md
+      - Numpy 2: Learning/Python/Numpy_2.md
+      - Pandas: Learning/Python/Pandas.md
+      - Pandas exercise 1: Learning/Python/Python_Pandas_exercise1.md
+      - Pandas 2: Learning/Python/Pandas2.md
+      - Pandas exercise 2: Learning/Python/Python_Pandas_exercise2.md
+      - Pandas Join Combine: Learning/Python/Pandas_Join_Combine.md
 
     - PyTorch:
-      - 0 Pytorch Fundamentals (ipynb): Learning/Pytorch/00_pytorch_fundamentals.ipynb
+      - 0 Pytorch Fundamentals (ipynb): Learning/Pytorch/00_pytorch_fundamentals.md
       - 0 Deep learning fundamentals (pdf): Learning/Pytorch/00_pytorch_and_deep_learning_fundamentals.pdf
-      - 1 Pytorch workflow (ipynb): Learning/Pytorch/01_pytorch_workflow.ipynb
+      - 1 Pytorch workflow (ipynb): Learning/Pytorch/01_pytorch_workflow.md
       - 1 Pytorch workflow (pdf): Learning/Pytorch/01_pytorch_workflow.pdf
-      - 2 classification (ipynb): Learning/Pytorch/02_pytorch_classification.ipynb
-      - 3 Computer vision (ipynb): Learning/Pytorch/03_pytorch_computer_vision.ipynb
+      - 2 classification (ipynb): Learning/Pytorch/02_pytorch_classification.md
+      - 3 Computer vision (ipynb): Learning/Pytorch/03_pytorch_computer_vision.md
       - 3 Compupter vision (pdf): Learning/Pytorch/03_pytorch_computer_vision.pdf
-      - 4 Custom datasets (pdf): Learning/Pytorch/04_pytorch_custom_datasets.ipynb
+      - 4 Custom datasets (pdf): Learning/Pytorch/04_pytorch_custom_datasets.md
       - 5 Going moduler (pdf): Learning/Pytorch/05_pytorch_going_modular.pdf
-      - 6 Transfer learning (ipynb): Learning/Pytorch/06_pytorch_transfer_learning.ipynb
+      - 6 Transfer learning (ipynb): Learning/Pytorch/06_pytorch_transfer_learning.md
       - 6 Transfer learning (pdf): Learning/Pytorch/06_pytorch_transfer_learning.pdf
-      - 7 Experiment tracking (ipynb): Learning/Pytorch/07_pytorch_experiment_tracking.ipynb
+      - 7 Experiment tracking (ipynb): Learning/Pytorch/07_pytorch_experiment_tracking.md
       - 7 Experiment tracking (pdf): Learning/Pytorch/07_pytorch_experiment_tracking.pdf
-      - 8 Paper replicating (ipynb): Learning/Pytorch/08_pytorch_paper_replicating.ipynb
+      - 8 Paper replicating (ipynb): Learning/Pytorch/08_pytorch_paper_replicating.md
       - 8 Paper replicating (pdf): Learning/Pytorch/08_pytorch_paper_replicating.pdf
       - 9 Model deployment(pdf): Learning/Pytorch/09_pytorch_model_deployment.pdf
 
     - Tensorflow:
-      - 0 Tensorflow fundamentals: Learning/Tensorflow/00_tensorflow_fundamentals.ipynb
-      - 1 Neural network regression: Learning/Tensorflow/01_neural_network_regression_in_tensorflow.ipynb
-      - 2 Neural network classification: Learning/Tensorflow/02_neural_network_classification_in_tensorflow.ipynb
-      - 4 Transfer learning: Learning/Tensorflow/04_transfer_learning_in_tensorflow_part_1_feature_extraction.ipynb
-      - 10 Time series forecasting: Learning/Tensorflow/10_time_series_forecasting_in_tensorflow.ipynb
+      - 0 Tensorflow fundamentals: Learning/Tensorflow/00_tensorflow_fundamentals.md
+      - 1 Neural network regression: Learning/Tensorflow/01_neural_network_regression_in_tensorflow.md
+      - 2 Neural network classification: Learning/Tensorflow/02_neural_network_classification_in_tensorflow.md
+      - 4 Transfer learning: Learning/Tensorflow/04_transfer_learning_in_tensorflow_part_1_feature_extraction.md
+      - 10 Time series forecasting: Learning/Tensorflow/10_time_series_forecasting_in_tensorflow.md
 
 
-    - OOP Practice: Learning/OOP_Practice.ipynb
+    - OOP Practice: Learning/OOP_Practice.md
 
-    - Visualization: Learning/Visualization.ipynb
+    - Visualization: Learning/Visualization.md
 
   - Môn học:
     - Xác suất thống kê:
