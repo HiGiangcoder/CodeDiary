@@ -51,3 +51,10 @@ margin: 0 auto;
     display: block !important;
 }
 
+img {
+    display: block;
+    margin: auto; /* Căn giữa ảnh */
+    max-width: 100%; /* Không vượt quá chiều rộng của trang */
+    height: auto; /* Giữ tỷ lệ ảnh */
+    min-width: 300px; /* Đảm bảo ảnh không quá nhỏ */
+}
